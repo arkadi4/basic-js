@@ -21,21 +21,21 @@ function dateSample( sampleActivity ) {
   // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
   if (typeof(sampleActivity) !== 'string' ) {return false}
-  console.log('zzz',typeof(sampleActivity), sampleActivity)
+  // console.log('zzz',typeof(sampleActivity), sampleActivity)
   sampleActivity = parseFloat(sampleActivity)
   if (isNaN(sampleActivity) || sampleActivity <= 0 || sampleActivity >= 15) return false;
   // sampleActivity = +sampleActivity
   if (typeof(sampleActivity) === 'number' ) {
-    console.log('yyy',typeof(sampleActivity), sampleActivity)
-    console.log('kkk', Math.ceil(Math.log(MODERN_ACTIVITY / parseFloat(sampleActivity)) / (0.693 / HALF_LIFE_PERIOD)))
+    // console.log('yyy',typeof(sampleActivity), sampleActivity)
+    // console.log('kkk', Math.ceil(Math.log(MODERN_ACTIVITY / parseFloat(sampleActivity)) / (0.693 / HALF_LIFE_PERIOD)))
     return     Math.ceil(Math.log(MODERN_ACTIVITY / parseFloat(sampleActivity)) / (0.693 / HALF_LIFE_PERIOD))   
 
   }
-  console.log('xxx',typeof(sampleActivity))
+  // console.log('xxx',typeof(sampleActivity))
   return false
 }
 
-console.log(dateSample('ljhc'))
+// console.log(dateSample('ljhc'))
 
 module.exports = {
   dateSample
